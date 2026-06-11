@@ -55,10 +55,7 @@ Setelah sistem berjalan dengan sukses di Docker, Anda dapat mengakses beberapa k
 - **Base URL API**: `http://localhost:8081`
 - **Swagger UI (Dokumentasi & Testing API)**: Buka browser Anda dan kunjungi `http://localhost:8081/swagger-ui.html`
 
-**Akses Container untuk Debugging:**
+**Akses Container melalui Terminal untuk Debugging:**
 - **Database PostgreSQL**: 
-  - Host: `localhost`
-  - Port: `5432`
-  - Database: `qris_payment`
-  - Username: `qris_user`
-  - Password: `qris_secret_2024`
+  ```bash
+  docker exec -it qris-postgres psql -U qris_user -d qris_payment
